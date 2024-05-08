@@ -5,7 +5,7 @@
 <script>
 import cabecalho from '../src/components/header.vue'
 import NavBar from '../src/components/nav.vue'
-import body from '../src/components/body.vue'
+import body from './components/favorityCarousel.vue'
 
 export default{
   name: 'App',
@@ -24,10 +24,18 @@ export default{
   --secondary-font: 'Roboto Mono';
   --black-background:#292929;
   --neo-green:#00FF00;
-  --darker-green:#10ec00;
+  --darker-green:#13ca06;
   --white-background:#F9F9F9;
   --font-color:#000000;
   --light-green-neo:#33FF3333;
+  --gray-font:#7F7F7F;
+  --dark-green: #008000;
+  --light-green:#00FF000D;
+  --black-opacity:#00000099;
+}
+html,body{
+  width: 100%;
+	height: 100%;
 }
 *{
   margin: 0;
@@ -37,6 +45,8 @@ body{
   box-sizing: border-box;
   background-color:var(--black-background) ;
   padding-top: 1% ;
+  margin: 0;
+  padding: 0;
 }
 ::-webkit-scrollbar-thumb{
   background: var(--neo-green);
@@ -45,4 +55,5 @@ body{
 ::-webkit-scrollbar{
   width:5px ;
 }
+
 </style>

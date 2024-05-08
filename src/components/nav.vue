@@ -2,7 +2,7 @@
     <head>
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
-  <nav class="header__menu">
+  <nav :class="{'header__menu-login':isLoginPage}" class="header__menu">
     <img v-bind:src="logoType" alt="LogoTipo NeoNavigation" class="menu__logo" draggable="false">
 
     <div class="menu__cargrup">
@@ -34,6 +34,11 @@ export default{
         userIcon:'/img/userIcon.png',
         logoType:'/img/logotipo.png',
       }
+    },
+    computed:{
+      isLoginPage(){
+        return this.$route.name=='login'
+      }
     }
 }
 </script>
@@ -50,7 +55,10 @@ body{
   padding-top: 1% ;
   font-family: var(--main-font);
 }
-
+.header__menu-login{
+  background-color: var(--black-opacity);
+  padding-bottom: .5%;
+}
 .header__menu{
   display: flex;
   gap: 40px;

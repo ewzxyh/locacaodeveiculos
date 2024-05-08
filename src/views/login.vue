@@ -1,7 +1,6 @@
 <template>
-  <!-- <img v-bind:src="matrix" alt="" class="matrix"> -->
+   <img v-bind:src="matrix" alt="" class="matrix"> 
   <section class="login">
-    <img class="login__car" v-bind:src="car" alt="Carro estilo Matrix">
     <form action="submit" class="login__form">
       <div class="form__images">
         <img class="image__logoType" v-bind:src="logoType" alt="Logotipo neonaviation" >
@@ -22,6 +21,7 @@
         <p><strong>termos de Serviço e Privacidade</strong> da NeoNavigation</p>
       </div>
     </form>
+    <img class="login__car" v-bind:src="car" alt="Carro estilo Matrix">
   </section>
 </template>
 <script>
@@ -51,7 +51,6 @@ body{
 }
 .login{
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
 }
 .login__car{
@@ -62,7 +61,7 @@ body{
   display: flex;
   flex-direction: column;
   margin-left: 20%;
-  height: 600px;
+  height: 100%;
   width: 37%;
   border-radius: 25% 20px 25% 20px;
   align-items: center;
@@ -151,6 +150,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5%;
 }
 p{
   font-size: .8rem;
@@ -158,6 +158,12 @@ p{
 @media screen and (max-width: 1920px ) {
   .input__button{
     margin-top:15%;
+  }
+  
+}
+@media screen and (max-width: 1500px ) {
+  .input__button{
+    margin-top:20%;
   }
   
 }

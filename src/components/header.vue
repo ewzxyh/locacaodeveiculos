@@ -69,7 +69,7 @@
             </div>
 
             <img v-bind:src="category" alt="marcador do maps" class="wrapper__map-marker" draggable="false">
-
+   
           </div>
 
           <div class="booking-form__wrapper-category">
@@ -89,7 +89,6 @@
             </div>
             <router-link to="/" class="colum-promotion__rent"><strong>Economize com aluguel mensal</strong></router-link>
           </div>
-
         </div>
       </div>
     </div>
