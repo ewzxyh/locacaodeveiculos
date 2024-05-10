@@ -13,7 +13,7 @@
         <button class="input__button"> Continuar</button>
       </div>
       <div class="login__links">
-        <router-link to="/" class="links__sing-in">Cadastrar-se</router-link>
+        <router-link to="/register" class="links__sing-in">Cadastrar-se</router-link>
         <router-link to="/" class="links__forget-my-password">Esqueci minha senha</router-link>
       </div>
       <div class="form__polices">

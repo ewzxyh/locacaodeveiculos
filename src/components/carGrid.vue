@@ -1,117 +1,81 @@
 <template>
-    <section class="container">
-        <img v-bind:src="questions" alt="" class="container__image">
-        <div class="container__columnA">
-            <div class="container__card-confy">
-                <h2 class="card__title">Para Longos Periodos</h2>
-                <img v-bind:src="confyCar" alt="" class="card__image">
-            </div>
-            <div class="container__card-eletric">
-                <h2 class="card__title">Carros Eletrico</h2>
-                
-                <img v-bind:src="eletricCar" alt="" class="card__image">
-            </div>
-        </div>
-        <div class="container__columnA">
-            <div class="container__card-deluxe">
-                <h2 class="card__title-deluxe">Deluxe & Super Deluxe</h2>
-                <img v-bind:src="superCar" alt="" class="card__image">
-            </div>
-            <div class="container__card-uber">
-                <h2 class="card__title">Carros para Ubers</h2>
-                <img v-bind:src="uberCar" alt="" class="card__image">
-            </div>
-        </div>
+    <section class="container"> 
+        <swiper
+      :effect="'flip'"
+      :grabCursor="true"
+      :pagination="true"
 
+      :modules="modules"
+      class="mySwiper"
+    >
+      <swiper-slide
+        ><img v-bind:src="questions" alt="Iagem de duvidas neo Navigation" class="swiper__image"></swiper-slide
+      ><swiper-slide
+        ><img v-bind:src="clientePortal" alt="Iagem de duvidas neo Navigation" class="swiper__image"></swiper-slide
+      >
+    </swiper>
     </section>
-</template>
+    <div class="container__grid">
+        
+    </div>
+  </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+
+import 'swiper/css/effect-flip';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+// import required modules
+import { EffectFlip } from 'swiper/modules';
 export default {
     name: "carGrid",
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
+    setup() {
+      return {
+        modules: [EffectFlip],
+      };
+    },
     data() {
         return {
             confyCar: '../img/confyCar.png',
-            questions:'../img/questions.png',
-            superCar:'../img/superCar.png',
-            uberCar:'../img/uberCar.png',
-            eletricCar:'../img/eletricCar.png',
-            powerStation:'../img/powerStation.png'
+            questions: '../img/questions.png',
+            superCar: '../img/superCar.png',
+            uberCar: '../img/uberCar.png',
+            eletricCar: '../img/eletricCar.png',
+            powerStation: '../img/powerStation.png',
+            clientePortal:'../img/clientePortal.png'
         }
-    },
+    }
 
 }
 </script>
 <style scoped>
-.container {
-    margin-top: 5%;
+.container{
     width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
 }
-.container__image{
-    width: 33%;
-    border-radius: 20px;
-}
-.container__columnA{
-    display: flex;
-    width: 20%;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-.container__card-confy {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white-background);
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    
-}
-.container__card-eletric {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white-background);
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    
-}
-.container__card-deluxe {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white-background);
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    
-}
-.container__card-uber {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white-background);
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    
+.swiper {
+  width: 30%;
+  
 }
 
-.card__title {
-    margin-top: 5%;
-    margin-left: 5%;
-    width: 90%;
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 20px ;
 }
 </style>

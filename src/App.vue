@@ -1,11 +1,13 @@
 <template>
   <NavBar/>
   <router-view/>
+
 </template>
 <script>
 import cabecalho from '../src/components/header.vue'
 import NavBar from '../src/components/nav.vue'
 import body from './components/favorityCarousel.vue'
+
 
 export default{
   name: 'App',
@@ -32,6 +34,7 @@ export default{
   --dark-green: #008000;
   --light-green:#00FF000D;
   --black-opacity:#00000099;
+  --gray:#BDBDBD;
 }
 html,body{
   width: 100%;
