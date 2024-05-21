@@ -181,11 +181,16 @@ export default {
         handleSubmit() {
             if (this.inputsEqual( this.verifiedEmail, this.email, this.primaryPhoneNumber, this.secondaryPhoneNumber,)) {
                 this.error = false;
-                this.$router.push('/confirmation')
-                console.log('cpf',this.cpf)
-                console.log('nome',this.name)
-                console.log('nacionalidad',this.selectedNationality)
-                console.log('sexo',this.gender)
+                const formData={
+                    name:this.name,
+                    nationality:this.selectedNationality,
+                    cpf:this.cpf,
+                    email:this.email,
+                    gender:this.gender,
+                    primaryPhoneNumber:this.primaryPhoneNumber,
+                    secondaryPhoneNumber:this.secondaryPhoneNumber,
+                };
+                this.$emit('form-submitted',formData)
             } else {
                 this.error = true;
                 alert('Preencha os dados corretamente');

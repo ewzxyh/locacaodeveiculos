@@ -65,7 +65,10 @@
 
             <div class="wrapper__pickup">
               <h2 class="pickup__title">Categoria do Carro</h2>
-              <input v-model="inputCategory" type="text" class="pickup__city" placeholder="Economico ?" required>
+              <select v-model="inputCategory" type="text" class="pickup__city" placeholder="Economico ?" required>
+                <option disabled value="">Economico ?</option>
+                <option :value="category" v-for="carCategory in carCategories" :key="carCategory">{{carCategory}}</option>
+              </select>
             </div>
 
             <img v-bind:src="category" alt="marcador do maps" class="wrapper__map-marker" draggable="false">
@@ -76,7 +79,11 @@
 
             <div class="wrapper__pickup">
               <h2 class="pickup__title">Marca do Carro (opcional)</h2>
-              <input v-model="inputBrand" type="text" class="pickup__city" placeholder="Honda ?" required>
+              <select v-model="inputBrand" type="text" class="pickup__city" placeholder="Honda ?" required>
+                <option disabled value=""><span>Marca</span></option>
+               <option :value="carBrand" v-for="carBrand in carBrands" :key="carBrand">
+              {{ carBrand }}</option>
+              </select>
             </div>
 
             <img v-bind:src="carBrand" alt="marcador do maps" class="wrapper__map-marker" draggable="false">
@@ -125,6 +132,29 @@ export default {
       inputBrand: '',
       inputPromo: '',
       showElement:false,
+      carCategories:[
+        'Furgão',
+        'Pick-up',
+        'Esportivo',
+        'Suv',
+        'Sedan',
+        'Hatch',
+        'Crossover',
+        'Perua',
+        'MiniVan'
+      ],
+      carBrands:[
+        'Toyota',
+        'Lamborguini',
+        'Masserati',
+        'Lotus',
+        'Audi',
+        'Mercedes',
+        'Tesla',
+        'Mclaren',
+        'BMW',
+        'Aston Martin'
+      ],
       config: {//metodo para formatar dia
         dateFormat: "d/m/Y"
       },
@@ -441,4 +471,20 @@ span {
   color: var(--main-font);
   text-decoration: underline;
 }
+@media screen and (max-width: 1170px) {
+    .container__booking-form{
+      width: 70%;
+    }
+   
+  }
+@media screen and (max-width: 1050px) {
+  .pickup__city{
+      width: 100%;
+    }
+    .pickup__title{
+      font-size: .8rem;
+      margin-top: 2%;
+    }
+   
+  }
 </style>

@@ -27,6 +27,10 @@ const routes = [
       document.body.style.overflow = 'hidden'; // Ajusta o overflow do body quando entra na rota 
       next();
     }
+  }, {
+    path: '/password',
+    name: 'password',
+    component: () => import('../views/password.vue')
   }
 ];
 

@@ -207,4 +207,19 @@ span:hover{
 .see-more__text:hover{
     color: var(--black-background);
 }
+@media screen and (max-width: 1300px) {
+    .mySwiper__content{
+        width: 100%;
+    }
+    .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 20px;
+}
+    .container__see-more{
+        width: 20%;
+    }
+}
 </style>

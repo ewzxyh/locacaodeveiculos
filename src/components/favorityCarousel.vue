@@ -290,4 +290,17 @@ strong {
     margin-top: 4%;
     font-weight: 400;
 }
+@media screen and (max-width: 1300px) {
+    .wraper__card{
+        width: 100%;
+    }
+    .card__group {
+    width: 65%;
+    text-align: center;
+    font-size: 1.5rem;
+    }
+    .container__see-more{
+        width: 20%;
+    }
+}
 </style>
