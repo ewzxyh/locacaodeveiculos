@@ -1,100 +1,194 @@
 <template>
-  <head>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  </head>
-
   <header class="header">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <div class="container">
-      <div class="container__case"> <img v-bind:src="shopBag" alt="icone da sacola" draggable="false" class="case__image">
+      <div class="container__case">
+        <img
+          v-bind:src="shopBag"
+          alt="icone da sacola"
+          draggable="false"
+          class="case__image"
+        />
       </div>
-      <div :class="{ 'container__booking-form-hover': allFieldsFilled }" class="container__booking-form">
+      <div
+        :class="{ 'container__booking-form-hover': allFieldsFilled }"
+        class="container__booking-form"
+      >
         <div class="wraper">
           <div class="booking-form__wrapper">
-
             <div class="wrapper__pickup">
               <h2 class="pickup__title">Digite o local de retirada</h2>
-              <input v-model="localPickUp" type="text" class="pickup__city" placeholder="Cidade" required>
+              <input
+                v-model="localPickUp"
+                type="text"
+                class="pickup__city"
+                placeholder="Cidade"
+                required
+              />
             </div>
 
-            <img v-bind:src="mapsMark" alt="marcador do maps" class="wrapper__map-marker" draggable="false">
-
+            <img
+              v-bind:src="mapsMark"
+              alt="marcador do maps"
+              class="wrapper__map-marker"
+              draggable="false"
+            />
           </div>
 
           <div class="wrapper__schedule">
-            <flat-pickr v-model="datePickUp" :config="config" class="schedule__input" placeholder="Data"></flat-pickr>
-            <img v-bind:src="calendar" alt="Imagem do caendario" draggable="false">
+            <flat-pickr
+              v-model="datePickUp"
+              :config="config"
+              class="schedule__input"
+              placeholder="Data"
+            ></flat-pickr>
+            <img v-bind:src="calendar" alt="Imagem do caendario" draggable="false" />
           </div>
 
           <div class="wrapper__schedule">
-            <flat-pickr v-model="timePickUp" :config="configTime" class="schedule__input" placeholder="Hora"></flat-pickr>
-            <img v-bind:src="clock" alt="Imagem do relogio" draggable="false">
+            <flat-pickr
+              v-model="timePickUp"
+              :config="configTime"
+              class="schedule__input"
+              placeholder="Hora"
+            ></flat-pickr>
+            <img v-bind:src="clock" alt="Imagem do relogio" draggable="false" />
           </div>
 
-          <button type="submit" :class="{'container__comfirm-expanded': allFieldsFilled}" class="container__comfirm"> Continuar</button>
-          <button v-if="!allFieldsFilled" @mouseover="changeText" @mouseout="resetText" class="container__hamburguer"><i
-              class='bx bx-menu'></i><span>{{ buttonText }}</span></button>
+          <button
+            type="submit"
+            :class="{ 'container__comfirm-expanded': allFieldsFilled }"
+            class="container__comfirm"
+          >
+            Continuar
+          </button>
+          <button
+            v-if="!allFieldsFilled"
+            @mouseover="changeText"
+            @mouseout="resetText"
+            class="container__hamburguer"
+          >
+            <i class="bx bx-menu"></i><span>{{ buttonText }}</span>
+          </button>
         </div>
         <!-- fileira de inputs da barra de alocação -->
         <div v-if="showElement" class="wraper">
           <div class="booking-form__wrapper">
-
             <div class="wrapper__pickup">
               <h2 class="pickup__title">Digite o local de entrega</h2>
-              <input v-model="localDeliver" type="text" class="pickup__city" placeholder="Cidade" required>
+              <input
+                v-model="localDeliver"
+                type="text"
+                class="pickup__city"
+                placeholder="Cidade"
+                required
+              />
             </div>
 
-            <img v-bind:src="mapsMark" alt="marcador do maps" class="wrapper__map-marker" draggable="false">
-
+            <img
+              v-bind:src="mapsMark"
+              alt="marcador do maps"
+              class="wrapper__map-marker"
+              draggable="false"
+            />
           </div>
 
           <div class="wrapper__schedule">
-            <flat-pickr v-model="dateDeliver" :config="config" class="schedule__input" placeholder="Data"></flat-pickr>
-            <img v-bind:src="calendar" alt="Imagem do caendario" draggable="false">
+            <flat-pickr
+              v-model="dateDeliver"
+              :config="config"
+              class="schedule__input"
+              placeholder="Data"
+            ></flat-pickr>
+            <img v-bind:src="calendar" alt="Imagem do caendario" draggable="false" />
           </div>
 
           <div class="wrapper__schedule">
-            <flat-pickr v-model="timeDeliver" :config="configTime" class="schedule__input"
-              placeholder="Hora"></flat-pickr>
-            <img v-bind:src="clock" alt="Imagem do relogio" draggable="false">
+            <flat-pickr
+              v-model="timeDeliver"
+              :config="configTime"
+              class="schedule__input"
+              placeholder="Hora"
+            ></flat-pickr>
+            <img v-bind:src="clock" alt="Imagem do relogio" draggable="false" />
           </div>
-          <button type="submit" :class="{'container__orders-expanded': allFieldsFilled}" class="container__orders"> Minhas Reservas</button>
+          <button
+            type="submit"
+            :class="{ 'container__orders-expanded': allFieldsFilled }"
+            class="container__orders"
+          >
+            Minhas Reservas
+          </button>
         </div>
         <!-- fileira de inputs da barra de categoria de carro -->
         <div v-if="showElement" class="wraper">
           <div class="booking-form__wrapper-category">
-
             <div class="wrapper__pickup">
               <h2 class="pickup__title">Categoria do Carro</h2>
-              <select v-model="inputCategory" type="text" class="pickup__city" placeholder="Economico ?" required>
+              <select
+                v-model="inputCategory"
+                type="text"
+                class="pickup__city"
+                placeholder="Economico ?"
+                required
+              >
                 <option disabled value="">Economico ?</option>
-                <option :value="category" v-for="carCategory in carCategories" :key="carCategory">{{carCategory}}</option>
+                <option
+                  :value="category"
+                  v-for="carCategory in carCategories"
+                  :key="carCategory"
+                >
+                  {{ carCategory }}
+                </option>
               </select>
             </div>
 
-            <img v-bind:src="category" alt="marcador do maps" class="wrapper__map-marker" draggable="false">
-   
+            <img
+              v-bind:src="category"
+              alt="marcador do maps"
+              class="wrapper__map-marker"
+              draggable="false"
+            />
           </div>
 
           <div class="booking-form__wrapper-category">
-
             <div class="wrapper__pickup">
               <h2 class="pickup__title">Marca do Carro (opcional)</h2>
-              <select v-model="inputBrand" type="text" class="pickup__city" placeholder="Honda ?" required>
+              <select
+                v-model="inputBrand"
+                type="text"
+                class="pickup__city"
+                placeholder="Honda ?"
+                required
+              >
                 <option disabled value=""><span>Marca</span></option>
-               <option :value="carBrand" v-for="carBrand in carBrands" :key="carBrand">
-              {{ carBrand }}</option>
+                <option :value="carBrand" v-for="carBrand in carBrands" :key="carBrand">
+                  {{ carBrand }}
+                </option>
               </select>
             </div>
 
-            <img v-bind:src="carBrand" alt="marcador do maps" class="wrapper__map-marker" draggable="false">
-
+            <img
+              v-bind:src="carBrand"
+              alt="marcador do maps"
+              class="wrapper__map-marker"
+              draggable="false"
+            />
           </div>
           <div class="wrapper__colum-promotion">
             <div class="colum-promotion__promotion">
-              <input v-model="inputPromo" type="text" class="promotio__input" placeholder="codigo Promocional" required>
-              <img v-bind:src="redemImage" alt="Imagem do relogio" draggable="false">
+              <input
+                v-model="inputPromo"
+                type="text"
+                class="promotio__input"
+                placeholder="codigo Promocional"
+                required
+              />
+              <img v-bind:src="redemImage" alt="Imagem do relogio" draggable="false" />
             </div>
-            <router-link to="/" class="colum-promotion__rent"><strong>Economize com aluguel mensal</strong></router-link>
+            <router-link to="/" class="colum-promotion__rent"
+              ><strong>Economize com aluguel mensal</strong></router-link
+            >
           </div>
         </div>
       </div>
@@ -103,13 +197,13 @@
 </template>
 
 <script>
-import flatPickr from 'vue-flatpickr-component';
-import 'flatpickr/dist/flatpickr.css';
+import flatPickr from "vue-flatpickr-component";
+import "flatpickr/dist/flatpickr.css";
 
 export default {
-  name: 'cabecalho',
+  name: "cabecalho",
   components: {
-    flatPickr
+    flatPickr,
   },
   data() {
     return {
@@ -120,51 +214,53 @@ export default {
       category: "/img/category.png",
       carBrand: "/img/bookmark.png",
       redemImage: "/img/redeem.png",
-      buttonText: '',
-      originalText: '',
-      hoverText: 'Minhas Reservas',
+      buttonText: "",
+      originalText: "",
+      hoverText: "Minhas Reservas",
       datePickUp: null,
-      localPickUp: '',
-      timePickUp: '',
-      dateDeliver: '',
-      timeDeliver: '',
-      inputCategory: '',
-      inputBrand: '',
-      inputPromo: '',
-      showElement:false,
-      carCategories:[
-        'Furgão',
-        'Pick-up',
-        'Esportivo',
-        'Suv',
-        'Sedan',
-        'Hatch',
-        'Crossover',
-        'Perua',
-        'MiniVan'
+      localPickUp: "",
+      timePickUp: "",
+      dateDeliver: "",
+      timeDeliver: "",
+      inputCategory: "",
+      inputBrand: "",
+      inputPromo: "",
+      showElement: false,
+      carCategories: [
+        "Furgão",
+        "Pick-up",
+        "Esportivo",
+        "Suv",
+        "Sedan",
+        "Hatch",
+        "Crossover",
+        "Perua",
+        "MiniVan",
       ],
-      carBrands:[
-        'Toyota',
-        'Lamborguini',
-        'Masserati',
-        'Lotus',
-        'Audi',
-        'Mercedes',
-        'Tesla',
-        'Mclaren',
-        'BMW',
-        'Aston Martin'
+      carBrands: [
+        "Toyota",
+        "Lamborguini",
+        "Masserati",
+        "Lotus",
+        "Audi",
+        "Mercedes",
+        "Tesla",
+        "Mclaren",
+        "BMW",
+        "Aston Martin",
       ],
-      config: {//metodo para formatar dia
-        dateFormat: "d/m/Y"
+      config: {
+        //metodo para formatar dia
+        dateFormat: "d/m/Y",
       },
-      configTime: { //metodo para formatar hora
+      configTime: {
+        //metodo para formatar hora
         enableTime: true,
         noCalendar: true,
         dateFormat: "H:i",
-        time_24hr: true
-      }
-    }
+        time_24hr: true,
+      },
+    };
   },
   methods: {
     changeText() {
@@ -176,26 +272,24 @@ export default {
   },
   computed: {
     allFieldsFilled() {
-      return this.localPickUp && this.timePickUp && this.datePickUp
+      return this.localPickUp && this.timePickUp && this.datePickUp;
     },
   },
-  watch:{
-    allFieldsFilled(newValue){
-      if(newValue){
-        setTimeout(()=>{
-          this.showElement=true;
-        },180);
-      }else{
-        this.showElement=false
+  watch: {
+    allFieldsFilled(newValue) {
+      if (newValue) {
+        setTimeout(() => {
+          this.showElement = true;
+        }, 180);
+      } else {
+        this.showElement = false;
       }
-    }
-  }
-}
-
+    },
+  },
+};
 </script>
 
-
-<style >
+<style>
 .container {
   display: flex;
   flex-direction: row;
@@ -241,7 +335,6 @@ export default {
   height: 250px;
   gap: 5%;
   transition: all 0.5s ease;
-
 }
 
 .booking-form__wrapper {
@@ -338,7 +431,7 @@ export default {
   background-color: var(--darker-green);
   transition: 0.7s;
 }
-.container__comfirm-expanded{
+.container__comfirm-expanded {
   border-radius: 50px;
   outline: none;
   border: none;
@@ -425,7 +518,7 @@ span {
   font-family: var(--main-font);
   font-weight: 800;
 }
-.container__orders-expanded{
+.container__orders-expanded {
   border-radius: 50px;
   outline: none;
   border: none;
@@ -438,7 +531,7 @@ span {
   font-family: var(--main-font);
   font-weight: 800;
 }
-.wrapper__colum-promotion{
+.wrapper__colum-promotion {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -446,15 +539,14 @@ span {
   width: 20%;
   gap: 8px;
 }
-.colum-promotion__promotion{
+.colum-promotion__promotion {
   display: flex;
   border: 2px solid var(--neo-green);
-  border-radius:50px;
+  border-radius: 50px;
   align-items: center;
   justify-content: center;
-  
 }
-.promotio__input{
+.promotio__input {
   outline: none;
   border: none;
   font-family: var(--main-font);
@@ -464,27 +556,25 @@ span {
   align-items: center;
   width: 80%;
 }
-.colum-promotion__rent{
+.colum-promotion__rent {
   font-size: 0.8rem;
 }
-.colum-promotion__rent:hover{
+.colum-promotion__rent:hover {
   color: var(--main-font);
   text-decoration: underline;
 }
 @media screen and (max-width: 1170px) {
-    .container__booking-form{
-      width: 70%;
-    }
-   
+  .container__booking-form {
+    width: 70%;
   }
+}
 @media screen and (max-width: 1050px) {
-  .pickup__city{
-      width: 100%;
-    }
-    .pickup__title{
-      font-size: .8rem;
-      margin-top: 2%;
-    }
-   
+  .pickup__city {
+    width: 100%;
   }
+  .pickup__title {
+    font-size: 0.8rem;
+    margin-top: 2%;
+  }
+}
 </style>

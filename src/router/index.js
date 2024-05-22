@@ -23,8 +23,7 @@ const routes = [
     path: '/confirmation',
     name: 'confirmation',
     component: () => import('../views/confirmation.vue'),
-    beforeEnter: (to, from, next) => {
-      document.body.style.overflow = 'hidden'; // Ajusta o overflow do body quando entra na rota 
+    beforeEnter: (to, from, next) => { // Ajusta o overflow do body quando entra na rota 
       next();
     }
   }, {
