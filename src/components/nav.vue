@@ -1,77 +1,100 @@
 <template>
-    <head>
-      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
-  <nav :class="{'header__menu-login':isLoginPage}" class="header__menu">
-    <img v-bind:src="logoType" alt="LogoTipo NeoNavigation" class="menu__logo" draggable="false">
+  <nav :class="{ 'header__menu-login': isLoginPage }" class="header__menu">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <img
+      v-bind:src="logoType"
+      alt="LogoTipo NeoNavigation"
+      class="menu__logo"
+      draggable="false"
+    />
 
     <div class="menu__cargrup">
-      <img v-bind:src="carIcon" alt="icone de carro" draggable="false" class="cargrup__image">
+      <img
+        v-bind:src="carIcon"
+        alt="icone de carro"
+        draggable="false"
+        class="cargrup__image"
+      />
       <a href="#" class="cargrup__link">Grupo de Carros</a>
     </div>
 
-    <router-link to="/home" class="menu__homeLink"><img v-bind:src="Logo" alt="Nome logo neonavigation" class="menu__logoname" draggable="false"></router-link>
+    <router-link to="/home" class="menu__homeLink"
+      ><img
+        v-bind:src="Logo"
+        alt="Nome logo neonavigation"
+        class="menu__logoname"
+        draggable="false"
+    /></router-link>
 
     <div class="menu__city">
       <a href="#" class="cargrup__link">Goiania</a>
     </div>
 
-    <button class="menu__hamburguer"><i class='bx bx-menu'><span></span></i></button>
-    
+    <button class="menu__hamburguer">
+      <i class="bx bx-menu"><span></span></i>
+    </button>
+
     <div class="menu__user">
-      <img v-bind:src="userIcon" alt="icone do usuario" draggable="false" class="cargrup__image">
+      <img
+        v-bind:src="userIcon"
+        alt="icone do usuario"
+        draggable="false"
+        class="cargrup__image"
+      />
       <router-link to="/login">Login</router-link>
     </div>
   </nav>
 </template>
 <script>
-export default{
-    name:'nav',
-    data(){
-      return{
-        carIcon:'/img/carIcon.png',
-        Logo:'/img/logo.png',
-        userIcon:'/img/userIcon.png',
-        logoType:'/img/logotipo.png',
-      }
+export default {
+  name: "nav",
+  data() {
+    return {
+      carIcon: "/img/carIcon.png",
+      Logo: "/img/logo.png",
+      userIcon: "/img/userIcon.png",
+      logoType: "/img/logotipo.png",
+    };
+  },
+  computed: {
+    isLoginPage() {
+      return this.$route.name == "login";
     },
-    computed:{
-      isLoginPage(){
-        return this.$route.name=='login'
-      }
-    }
-}
+  },
+};
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
+body {
   box-sizing: border-box;
-  background-color:var(--black-background) ;
-  padding-top: 1% ;
+  background-color: var(--black-background);
+  padding-top: 1%;
   font-family: var(--main-font);
 }
-.header__menu-login{
+.header__menu-login {
   background-color: var(--black-opacity);
-  padding-bottom: .5%;
+  padding-bottom: 0.5%;
 }
-.header__menu{
+.header__menu {
   display: flex;
   gap: 40px;
   align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
   justify-content: center;
 }
-.menu__logo{
+.menu__logo {
   height: 3%;
   width: 4%;
 }
-.menu__cargrup{
+.menu__cargrup {
   display: flex;
-  background-color: var(--white-background) ;
+  background-color: var(--white-background);
   border-radius: 30px;
   width: 17%;
   height: 45px;
@@ -79,34 +102,33 @@ body{
   justify-content: center;
   flex-wrap: nowrap;
 }
-.cargrup__image{
+.cargrup__image {
   width: 39px;
 }
-a{
+a {
   text-decoration: none;
-  font-size:1.2rem;
-  font-weight:400;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: var(--font-color);
   transition: all 0.6s ease;
-  
 }
-a:hover{
+a:hover {
   color: var(--neo-green);
   transition: all 0.6s ease;
 }
-.menu__homeLink{
+.menu__homeLink {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 27%;
 }
-.menu__logoname{
+.menu__logoname {
   width: 100%;
   cursor: pointer;
 }
-.menu__city{
+.menu__city {
   display: flex;
-  background-color: var(--white-background) ;
+  background-color: var(--white-background);
   border-radius: 30px;
   width: 8%;
   height: 45px;
@@ -114,18 +136,18 @@ a:hover{
   justify-content: center;
   flex-wrap: nowrap;
 }
-.menu__user{
+.menu__user {
   display: flex;
-  background-color: var(--white-background) ;
+  background-color: var(--white-background);
   border-radius: 30px;
   width: 12%;
   height: 45px;
   align-items: center;
   justify-content: center;
-  gap:4px;
+  gap: 4px;
   flex-wrap: nowrap;
 }
-.menu__hamburguer{
+.menu__hamburguer {
   border-radius: 50px;
   outline: none;
   border: none;
@@ -135,10 +157,10 @@ a:hover{
   background-color: var(--white-background);
   flex-wrap: nowrap;
 }
-.bx-menu{
+.bx-menu {
   font-size: 30px;
 }
-.bx-menu:hover{
+.bx-menu:hover {
   color: var(--neo-green);
   transition: 0.5s;
 }

@@ -12,7 +12,6 @@ const routes = [
     name: 'login',
     component: () => import(/* webpackChunkName: "about" */ '../views/login.vue'),
     beforeEnter: (to, from, next) => {
-      document.body.style.overflow = 'hidden'; // Ajusta o overflow do body quando entra na rota 
       next();
     }
   }, {
