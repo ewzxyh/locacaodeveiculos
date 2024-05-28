@@ -74,10 +74,11 @@ export default {
 .container {
   display: flex;
   width: 100%;
+  height: 100vh;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  gap: 150px;
+  gap: 30%;
 }
 
 .container__uper-section {
@@ -129,7 +130,7 @@ export default {
 }
 
 .step__image {
-  width: 60%;
+  width: 70%;
 }
 
 .example__paragraph {
@@ -144,7 +145,7 @@ export default {
   background-color: var(--light-green-neo);
   width: 80%;
   align-items: center;
-  border-radius: 90% 90% 0 0;
+  border-radius: 500px 500px 0 0;
   gap: 45px;
 }
 
@@ -199,5 +200,81 @@ export default {
   text-align: center;
   font-size: 1.4rem;
   font-family: var(--secondary-font);
+}
+@media screen and (max-width: 1500px ){
+  .container__code {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-green-neo);
+  width:90%;
+  align-items: center;
+  border-radius: 450px 450px 0 0;
+  gap: 45px;
+}
+.code__title {
+  margin-top: 5%;
+  width: 40%;
+  text-align: center;
+}
+}
+@media screen and (max-width: 1200px ){
+  .container{
+    gap: 10%;
+  }
+  .container__code {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-green-neo);
+  width:90%;
+  align-items: center;
+  border-radius: 350px 350px 0 0;
+  gap: 45px;
+}
+.container__uper-section{
+  display: flex;
+  align-items: center;
+  gap: 10%;
+}
+.example__image {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-background);
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+}
+.code__title {
+  margin-top: 5%;
+  width: 40%;
+  text-align: center;
+}
+.uper-section__step {
+  display: flex;
+  background-color: var(--white-background);
+  width: 35%;
+  height: 100%;
+  border-radius: 20px;
+}
+.container__paragraph{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.uper-section__example{
+justify-content:center;
+}
+.example__paragraph {
+  width: 60%;
+  color: var(--white-background);
+  font-size: 1rem;
+}
+.step__image{
+  width: 95%;
+}
+
 }
 </style>

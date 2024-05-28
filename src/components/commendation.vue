@@ -125,12 +125,14 @@ export default {
 
 .container__card {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     width: 25%;
     background-color: var(--white-background);
     border-radius: 20px;
+    height: 35vh;
 }
 
 .card__header {
@@ -141,6 +143,7 @@ export default {
     width: 100%;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .header__image {
@@ -177,6 +180,7 @@ export default {
 .content__user-data {
     width: 100%;
     display: flex;
+    flex-wrap: nowrap;
 }
 
 .user-data__trip {
@@ -195,6 +199,7 @@ export default {
     width: 90%;
     margin-left: 5%;
     margin-bottom: 10%;
+    flex-wrap: nowrap;
 }
 
 .container__stars {
@@ -204,4 +209,19 @@ export default {
 
 .review__paragraph {
     text-align: left;
-}</style>
+    
+}
+@media screen and (max-width: 1400px) {
+    .container__card {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 30%;
+    background-color: var(--white-background);
+    border-radius: 20px;
+    height: 45vh;
+}
+}
+</style>

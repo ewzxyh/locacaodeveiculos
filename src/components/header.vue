@@ -345,6 +345,7 @@ export default {
   border: 2px solid var(--neo-green);
   width: 32%;
   padding-right: 2%;
+  flex-wrap: nowrap;
 }
 
 .booking-form__wrapper-category {
