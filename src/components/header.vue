@@ -153,7 +153,7 @@
 
           <div class="booking-form__wrapper-category">
             <div class="wrapper__pickup">
-              <h2 class="pickup__title">Marca do Carro (opcional)</h2>
+              <h2 class="pickup__title">Marca do Carro</h2>
               <select
                 v-model="inputBrand"
                 type="text"

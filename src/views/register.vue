@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     handleFormSubmitted(formData) {
-      console.log("data", formData);
+      axios.put('https://p62hqwsuq5.execute-api.us-east-1.amazonaws.com/neonav/auth/login')
       this.$router.push("/confirmation");
     },
   },

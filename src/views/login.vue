@@ -13,8 +13,8 @@
         <button class="input__button"> Continuar</button>
       </div>
       <div class="login__links">
-        <router-link to="/register" class="links__sing-in">Cadastrar-se</router-link>
-        <router-link to="/" class="links__forget-my-password">Esqueci minha senha</router-link>
+        <router-link to="/register" class="links__link">Cadastrar-se</router-link>
+        <router-link to="/" class="links__link">Esqueci minha senha</router-link>
       </div>
       <div class="form__polices">
         <p>Ao fazer login, você concorda com os </p>
@@ -138,11 +138,13 @@ body{
   transition: all .5s ease;
 }
 .login__links{
-  justify-content: center;
+  width: 100%;
+  justify-content: space-around;
   align-items: center;
   display: flex;
   margin-top: 15%;
-  gap: 80px;
+  flex-wrap: nowrap;
+
 }
 .form__polices{
   margin-top:5%;
@@ -166,5 +168,16 @@ p{
     margin-top:20%;
   }
   
+}
+@media screen and (max-width: 1350px ) {
+  .login__form{
+    width: 70%;
+  }
+  .input__button{
+    margin-top:23%;
+  }
+  .login__links{
+    font-size: 1rem;
+  }
 }
 </style>

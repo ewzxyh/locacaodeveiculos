@@ -623,5 +623,11 @@ strong {
         width: 90%;
     }
 }
+@media screen and (max-width: 1200px) {
+    
+    .row__data {
+        width: 98%;
+    }
+}
 
 </style>
