@@ -117,9 +117,8 @@ export default {
 .wraper {
     margin-top: 5%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 10%;
 }
 
 
@@ -212,16 +211,16 @@ export default {
     
 }
 @media screen and (max-width: 1400px) {
+
     .container__card {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
     width: 30%;
     background-color: var(--white-background);
     border-radius: 20px;
-    height: 45vh;
+    height: 40vh;
 }
 }
 </style>

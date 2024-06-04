@@ -39,13 +39,11 @@ export default {
 }
 </script>
 <style scoped>
-body{
-  overflow: hidden;
-}
+
 .matrix{
   margin-top: -10%;
   position: absolute;
-  width: 100vw;
+  width: 99vw;
   height: 100vh;
   z-index: -1;
 }
@@ -55,6 +53,7 @@ body{
 }
 .login__car{
   width: 39%;
+
 }
 .login__form{
   background-color: var(--white-background);

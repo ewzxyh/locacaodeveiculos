@@ -63,6 +63,7 @@ export default{
     
 }
 .content__paragraph{
+    font-family: var(--secondary-font);
     margin-top:2%;
     font-size: 1.5rem;
 }

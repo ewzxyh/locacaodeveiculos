@@ -260,7 +260,7 @@ export default {
 }
 
 .LGPD__link {
-    color: var(--neo-green);
+    color: var(--dark-green);
     font-size: 1rem;
     font-weight: 500;
 }

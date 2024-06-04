@@ -1,16 +1,15 @@
 <template>
-  <head>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  </head>
-  <Header />
-  <carGrid/>
-  <ServiceQualitySummary />
-  <favorityCarousel />
-  <categoryCarousel />
-  <commendation />
-  <faq />
-  <serviceMenu />
-  <Footer/>
+  <div>
+    <Header />
+    <carGrid />
+    <ServiceQualitySummary />
+    <favorityCarousel />
+    <categoryCarousel />
+    <commendation />
+    <faq />
+    <serviceMenu />
+    <Footer />
+  </div>
 </template>
 
 <script>

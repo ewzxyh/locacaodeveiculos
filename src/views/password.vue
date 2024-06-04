@@ -167,8 +167,7 @@ export default {
 .password__wraper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+ 
     width: 35%;
     height: 50%;
     
