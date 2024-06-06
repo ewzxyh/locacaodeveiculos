@@ -51,7 +51,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Pagination,EffectFlip, Navigation } from "swiper/modules";
+import { Pagination, EffectFlip, Navigation } from "swiper/modules";
 export default {
   name: "carGrid",
   components: {
@@ -118,6 +118,7 @@ export default {
   width: 40%;
   margin: 0;
   margin-right: 2em;
+  overflow-x: hidden;
 }
 
 .swiper-slide {
@@ -129,19 +130,5 @@ export default {
   display: block;
   width: 100%;
   border-radius: 20px;
-}
-@media screen and (min-width:1400px) {
-  .swiper {
-  width: 30%;
-  margin: 0;
-  margin-right: 2em;
-}
-}
-@media screen and (min-width:1800px) {
-  .swiper {
-  width: 26%;
-  margin: 0;
-  margin-right: 2em;
-}
 }
 </style>
