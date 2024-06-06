@@ -17,15 +17,8 @@ const routes = [
     path: '/login',
     name: 'login',
     component: () => import(/* webpackChunkName: "about" */ '../views/login.vue'),
-<<<<<<< HEAD
-  },
-  {
-=======
-    beforeEnter: (to, from, next) => {
-      next();
-    }
   }, {
->>>>>>> f31bfd084be3c3ba1187d8aa5108944fa96f138e
+
     path: '/register',
     name: 'register',
     component: () => import('../views/register.vue')
@@ -55,10 +48,6 @@ const router = createRouter({
   routes
 });
 
-router.afterEach((to, from) => {
-  if (from.path === '/login') {
-    document.body.style.overflow = ''; // Restaura o overflow do body quando sai da rota de login
-  }
-});
+
 
 export default router;

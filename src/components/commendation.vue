@@ -123,9 +123,8 @@ export default {
 .wraper {
     margin-top: 5%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 10%;
 }
 
 .container__card {
@@ -223,7 +222,7 @@ export default {
     width: 30%;
     background-color: var(--white-background);
     border-radius: 20px;
-    height: 45vh;
+    height: 35vh;
 }
 }
 </style>

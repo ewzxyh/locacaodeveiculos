@@ -38,20 +38,13 @@ export default {
 };
 </script>
 <style scoped>
-<<<<<<< HEAD
 
-.matrix{
-  margin-top: -10%;
-  position: absolute;
-  width: 99vw;
-  height: 100vh;
-=======
+
 .matrix {
   width: 100vw;
   height: auto;
   margin: 0;
   object-fit: cover;
->>>>>>> f31bfd084be3c3ba1187d8aa5108944fa96f138e
   z-index: -1;
   display: block;
   position: fixed; /* Fixa a imagem na viewport */
@@ -67,14 +60,9 @@ export default {
 }
 .login__car {
   width: 39%;
-<<<<<<< HEAD
-
-=======
   object-fit: cover;
   overflow: hidden;
-  height: 150vh;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 80%) !important;
->>>>>>> f31bfd084be3c3ba1187d8aa5108944fa96f138e
+
 }
 .login__form {
   background-color: var(--white-background);
@@ -85,7 +73,7 @@ export default {
   width: 40%;
   border-radius: 25% 20px 25% 20px;
   align-items: center;
-  margin-top: 1%;
+  margin-top: 10%;
 }
 .form__images {
   display: flex;
@@ -187,7 +175,7 @@ p {
 }
 @media screen and (max-width: 1350px) {
   .login__form {
-    width: 70%;
+    width: 40%;
   }
   .input__button {
     margin-top: 23%;

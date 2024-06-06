@@ -1,5 +1,21 @@
 <template>
-  <formTemplate/>.
+  <formTemplate/>
+  <form action="">
+    <div class="code__input">
+<input
+      v-for="(input, index) in inputs"
+      :key="index"
+      type="text"
+      maxlength="1"
+      v-model="inputs[index]"
+      @input="onInput"
+      @keydown.backspace="onBackspace"
+      ref="inputs"
+      class="input__value"
+      placeholder="-"
+    />
+      </div>
+  </form>
 </template>
 <script>
 import formTemplate from '../components/formTemplate.vue'
@@ -23,12 +39,18 @@ export default {
       if (index < this.inputs.length - 1 && event.target.value !== "") {
         this.$refs.inputs[index + 1].focus();
       }
+    },onBackspace(event) {
+      // Focus previous input field if current field is empty
+      const index = this.$refs.inputs.indexOf(event.target);
+      console.log
+      if (event.target.value === "" && index > 0) {
+        this.$refs.inputs[index - 1].focus();
+      }
     },
   },
 };
 </script>
-<<<<<<< HEAD
-=======
+
 <style>
 .container {
   display: flex;
@@ -235,4 +257,3 @@ export default {
   }
 }
 </style>
->>>>>>> f31bfd084be3c3ba1187d8aa5108944fa96f138e

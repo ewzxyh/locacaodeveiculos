@@ -1,89 +1,16 @@
 <template>
-  <form @submit.prevent="passwordVerification" class="container">
-    <div class="container__uper-section">
-      <div class="uper-section__warnig">
-        <div class="warning__square">
-          <div class="square__inner">
-            <img v-bind:src="shield" alt="" class="inner__image" />
-          </div>
-        </div>
-        <div class="warning__paragraph">Sua conta foi verificada com sucesso!</div>
-      </div>
-      <div class="uper-section__step">
-        <img v-bind:src="stepPassword" alt="" class="step__image" />
-      </div>
-    </div>
-    <div class="mid-section__row">
-      <h3 class="row__title">E-mail</h3>
-      <div class="row__input">
-        <div class="data__email">
-          <input
-            type="email"
-            v-model="email"
-            placeholder="Digite seu melhor e-mail"
-            class="data-input"
-            required
-          />
-          <div class="email__wraper">
-            <h3 class="label">Confirme seu E-mail</h3>
-            <input
-              type="email"
-              v-model="verifiedEmail"
-              placeholder="Digite novamente seu e-mail"
-              class="data"
-              required
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container__password">
-      <h1 class="password__title">Agora crie uma senha para sua conta.</h1>
-      <div class="password__wraper">
-        <h1 class="wraper__title">Senha</h1>
-        <div class="wraper__input">
-          <div class="input__border">
-            <input
-              v-model="password"
-              :type="passwordFieldType"
-              class="input__password"
-              placeholder="Digite sua senha"
-            />
-            <img
-              @click="togllePasswordVisibility"
-              class="border__image"
-              :src="eyeSwapper"
-              alt="imagem de olho"
-            />
-          </div>
-          <div class="input__border">
-            <input
-              v-model="passwordConfirmation"
-              :type="passwordFieldType"
-              class="input__password"
-              placeholder="Digite sua senha novamente"
-            />
-            <img
-              @click="togllePasswordVisibility"
-              class="border__image"
-              :src="eyeSwapper"
-              alt="imagem de olho"
-            />
-          </div>
-        </div>
-        <button type="submit" class="wraper__button">Continuar</button>
-      </div>
-      <p class="password__paragraph">
-        Mínimo 6 caracteres. <br />
-        Utilize pelo menos: 1 caractere especial, 1 letra maiúscula, 1 minúscula e 1
-        número.
-      </p>
-    </div>
+  <formTemplate/>
+  <form action="">
+    
   </form>
 </template>
 
 <script>
+import formTemplate from '../components/formTemplate.vue'
 export default {
+  components:{
+    formTemplate
+  },
   data() {
     return {
       shield: "../img/shield.png",
