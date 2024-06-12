@@ -90,6 +90,12 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .cargrup__image {
@@ -130,6 +136,12 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .menu__user {
@@ -142,6 +154,12 @@ a:hover {
   justify-content: center;
   gap: 4px;
   flex-wrap: nowrap;
+  box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .menu__hamburguer {
@@ -153,6 +171,12 @@ a:hover {
   width: 45px;
   background-color: var(--white-background);
   flex-wrap: nowrap;
+  box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .bx-menu {

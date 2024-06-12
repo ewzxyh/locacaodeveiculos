@@ -59,22 +59,25 @@ export default {
 }
 .container__grid {
   margin-top: 5%;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Define duas colunas com largura igual */
-  grid-template-rows: auto auto auto; /* Define três linhas, cada uma ajustando-se ao conteúdo */
-  gap: 20px; /* Espaço entre as células da grid */
   padding: 10px;
-  width: 95%;
+  width: 90%;
   justify-items: center;
   align-items: center;
 }
 .grid__link {
-  width: 70%;
+  width: 100%;
   background-color: var(--white-background);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  margin-bottom: 3px !important;
+  box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 .link__faq {
   display: flex;
@@ -87,7 +90,7 @@ export default {
 }
 span {
   color: var(--font-color);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   transition: all 0.5s ease;
 }
 span:hover {

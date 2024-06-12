@@ -86,26 +86,35 @@ export default {
 }
 
 .container__banner {
-    margin-top: 4%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 88%;
 }
 
 .banner__wraper {
+    box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--white-background);
     width: 95%;
     border-radius: 20px;
+    padding: 1.5em;
 }
 
 .wraper__disclaimer {
     margin: .5% 0 .5% 0;
     background-color: var(--light-green-neo);
-    width: 25%;
+    width: 32.3%;
+    min-height: 200px;
+    height: auto;
+    padding: 1.5em;
     justify-content: space-evenly;
     align-items: center;
     display: flex;
@@ -122,6 +131,7 @@ export default {
     height: 50px;
     width: 50px;
     margin: 0 0 0 .3%;
+    padding: 2em;
 }
 
 .bx-search-alt-2 {
@@ -160,7 +170,7 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 10%;
     justify-content: center;
 }
 
@@ -179,6 +189,12 @@ export default {
 }
 
 .reliability__discount {
+    box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
     margin-top: 4%;
     display: flex;
     justify-content: space-evenly;
@@ -186,6 +202,7 @@ export default {
     background-color: var(--white-background);
     width: 95%;
     border-radius: 20px;
+    padding: 1.5em;
 }
 
 .discount__wraper {
@@ -196,8 +213,11 @@ export default {
     align-items: center;
     background-color: var(--light-green-neo);
     border-radius: 20px;
-    width: 22%;
+    width: 24%;
     gap: 4px;
+    min-height: 230px;
+    height: auto;
+    padding: 1.5em;
 }
 
 .wraper__percentage {

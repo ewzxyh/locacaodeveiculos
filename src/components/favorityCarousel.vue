@@ -1,7 +1,7 @@
 <template>
     <section class="container">
         <h1 class="container__title">Navegue pelos <strong>Grupos Favoritos</strong></h1>
-        <swiper :slidesPerView="4"  :loop="true" :spaceBetween="30" :speed="1200"   :centeredSlides="true" :autoplay="{
+        <swiper :slidesPerView="4"  :loop="true" :spaceBetween="-50" :speed="1200"   :centeredSlides="true" :autoplay="{
       delay: 3000,
       disableOnInteraction: false,
     }" :pagination="{
@@ -10,7 +10,7 @@
             <swiper-slide>
                 <div class="carousel__wraper">
                     <div class="wraper__card">
-                        <h1 class="card__group">Compacto com ar</h1>
+                        <h1 class="card__group">Compacto<br>com ar</h1>
                         <img v-bind:src="mostPickedCar" alt="Carros com melhores avaliações" class="card__image">
                         <p class="card__paragraph">Fiat mobi 1.0 Renault kwid 1.0 ou similar*</p>
                         <router-link to="/" class="card__order-now"><span class="order-now__text">Reserve
@@ -23,7 +23,7 @@
             <swiper-slide>
                 <div class="carousel__wraper">
                     <div class="wraper__card">
-                        <h1 class="card__group">Compacto com ar</h1>
+                        <h1 class="card__group">Compacto<br>com ar</h1>
                         <img v-bind:src="mostPickedCar" alt="Carros com melhores avaliações" class="card__image">
                         <p class="card__paragraph">Fiat mobi 1.0 Renault kwid 1.0 ou similar*</p>
                         <router-link to="/" class="card__order-now"><span class="order-now__text">Reserve
@@ -36,7 +36,7 @@
             <swiper-slide>
                 <div class="carousel__wraper">
                     <div class="wraper__card">
-                        <h1 class="card__group">Compacto com ar</h1>
+                        <h1 class="card__group">Compacto<br>com ar</h1>
                         <img v-bind:src="mostPickedCar" alt="Carros com melhores avaliações" class="card__image">
                         <p class="card__paragraph">Fiat mobi 1.0 Renault kwid 1.0 ou similar*</p>
                         <router-link to="/" class="card__order-now"><span class="order-now__text">Reserve
@@ -49,7 +49,7 @@
             <swiper-slide>
                 <div class="carousel__wraper">
                     <div class="wraper__card">
-                        <h1 class="card__group">Compacto com ar</h1>
+                        <h1 class="card__group">Compacto<br>com ar</h1>
                         <img v-bind:src="mostPickedCar" alt="Carros com melhores avaliações" class="card__image">
                         <p class="card__paragraph">Fiat mobi 1.0 Renault kwid 1.0 ou similar*</p>
                         <router-link to="/" class="card__order-now"><span class="order-now__text">Reserve
@@ -62,7 +62,7 @@
             <swiper-slide>
                 <div class="carousel__wraper">
                     <div class="wraper__card">
-                        <h1 class="card__group">Compacto com ar</h1>
+                        <h1 class="card__group">Compacto<br>com ar</h1>
                         <img v-bind:src="mostPickedCar" alt="Carros com melhores avaliações" class="card__image">
                         <p class="card__paragraph">Fiat mobi 1.0 Renault kwid 1.0 ou similar*</p>
                         <router-link to="/" class="card__order-now"><span class="order-now__text">Reserve
@@ -75,7 +75,7 @@
             <swiper-slide>
                 <div class="carousel__wraper">
                     <div class="wraper__card">
-                        <h1 class="card__group">Compacto com ar</h1>
+                        <h1 class="card__group">Compacto<br>com ar</h1>
                         <img v-bind:src="mostPickedCar" alt="Carros com melhores avaliações" class="card__image">
                         <p class="card__paragraph">Fiat mobi 1.0 Renault kwid 1.0 ou similar*</p>
                         <router-link to="/" class="card__order-now"><span class="order-now__text">Reserve
@@ -88,7 +88,7 @@
             <swiper-slide>
                 <div class="carousel__wraper">
                     <div class="wraper__card">
-                        <h1 class="card__group">Compacto com ar</h1>
+                        <h1 class="card__group">Compacto<br>com ar</h1>
                         <img v-bind:src="mostPickedCar" alt="Carros com melhores avaliações" class="card__image">
                         <p class="card__paragraph">Fiat mobi 1.0 Renault kwid 1.0 ou similar*</p>
                         <router-link to="/" class="card__order-now"><span class="order-now__text">Reserve
@@ -101,7 +101,7 @@
             <swiper-slide>
                 <div class="carousel__wraper">
                     <div class="wraper__card">
-                        <h1 class="card__group">Compacto com ar</h1>
+                        <h1 class="card__group">Compacto<br>com ar</h1>
                         <img v-bind:src="mostPickedCar" alt="Carros com melhores avaliações" class="card__image">
                         <p class="card__paragraph">Fiat mobi 1.0 Renault kwid 1.0 ou similar*</p>
                         <router-link to="/" class="card__order-now"><span class="order-now__text">Reserve
@@ -114,7 +114,7 @@
             <swiper-slide>
                 <div class="carousel__wraper">
                     <div class="wraper__card">
-                        <h1 class="card__group">Compacto com ar</h1>
+                        <h1 class="card__group">Compacto<br>com ar</h1>
                         <img v-bind:src="mostPickedCar" alt="Carros com melhores avaliações" class="card__image">
                         <p class="card__paragraph">Fiat mobi 1.0 Renault kwid 1.0 ou similar*</p>
                         <router-link to="/" class="card__order-now"><span class="order-now__text">Reserve
@@ -215,6 +215,7 @@ strong {
 }
 
 .wraper__card {
+    padding: 2.5em;
     margin-top: 20%;
     background-color: var(--white-background);
     border-radius: 20px;
@@ -224,11 +225,17 @@ strong {
     align-items: center;
     gap: 15px;
     width: 80%;
+    box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .card__group {
     color: var(--neo-green);
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
@@ -250,7 +257,7 @@ strong {
     justify-content: center;
     background-color: var(--neo-green);
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
 }
 
 .order-now__text {
@@ -279,8 +286,14 @@ strong {
     justify-content: center;
     background-color: var(--neo-green);
     margin-top: 5%;
-    width: 15%;
-    border-radius: 40px;
+    width: 30%;
+    border-radius: 50px;
+    box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .see-more__text {
@@ -292,10 +305,11 @@ strong {
 }
 @media screen and (max-width: 1300px) {
     .wraper__card{
+        min-height: 474px;
         width: 100%;
     }
     .card__group {
-    width: 65%;
+    width: 100%;
     text-align: center;
     font-size: 1.5rem;
     }

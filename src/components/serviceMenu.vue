@@ -39,19 +39,28 @@ export default {
     align-items: center;
 }
 .container__menu{
+    box-shadow: 0px 0px 0px 1px rgba(165, 165, 165, 0.04),
+    -9px 9px 9px -0.5px rgba(0, 0, 0, 0.04),
+    -18px 18px 18px -1.5px rgba(0, 0, 0, 0.08),
+    -37px 37px 37px -3px rgba(0, 0, 0, 0.16),
+    -75px 75px 75px -6px rgba(0, 0, 0, 0.24),
+    -150px 150px 150px -12px rgba(19, 18, 18, 0.48) !important;
+
+    padding: 1.5em 2.5em;
     background-color: var(--white-background);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;
-    width: 95%;
+    width: 90%;
     border-radius: 10px;
 }
 .menu__wraper-links{
+    min-width: 32.3%;
+    padding: 2em;
     margin-top: 1%;
     margin-bottom: 1%;
     background-color: var(--light-green);
-    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;

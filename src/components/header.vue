@@ -181,7 +181,7 @@
                 v-model="inputPromo"
                 type="text"
                 class="promotio__input"
-                placeholder="codigo Promocional"
+                placeholder="Codigo Promocional"
                 required
               />
               <img v-bind:src="redemImage" alt="Imagem do relogio" draggable="false" />
@@ -325,16 +325,30 @@ export default {
   flex-direction: column;
   border-radius: 50px;
   width: 64%;
-  height: 75px;
+  height: 90px;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .container__booking-form-hover {
   height: 250px;
   gap: 5%;
+  padding: 4em 0em;
   transition: all 0.5s ease;
+  border-radius: 30px;
+  box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .booking-form__wrapper {
@@ -555,7 +569,7 @@ span {
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 70%;
 }
 .colum-promotion__rent {
   font-size: 0.8rem;

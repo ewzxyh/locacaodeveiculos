@@ -128,15 +128,22 @@ export default {
 }
 
 .container__card {
+  padding: 1.5em;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  width: 25%;
+  width: 32.4%;
   background-color: var(--white-background);
   border-radius: 20px;
   height: 35vh;
+  box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .card__header {

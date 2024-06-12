@@ -153,6 +153,12 @@ import { Autoplay, Navigation } from 'swiper/modules';
     height: 40vh;
     object-fit: cover;
     border-radius: 20px;
+    box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .swiper {
@@ -170,11 +176,18 @@ import { Autoplay, Navigation } from 'swiper/modules';
 
 .content__link-wraper{
   background-color: var(--white-background);
-  width: 95%;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.5em;
+  box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 span{
   color: var(--black-background);
@@ -193,8 +206,14 @@ span:hover{
     justify-content: center;
     background-color: var(--neo-green);
     margin-top: 5%;
-    width: 15%;
-    border-radius: 40px;
+    width: 30%;
+    border-radius: 50px;
+    box-shadow:
+        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
+        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
 }
 
 .see-more__text {
