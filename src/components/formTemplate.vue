@@ -17,7 +17,7 @@
     </div>
     <div class="container__code">
       <h1 class="code__title">{{ title }}</h1>
-      
+      <confirmInput></confirmInput>
       <button class="container__resend-link">{{ buttonText }}</button>
       <p class="container__paragraph">
         {{ firstRow }} <br />
@@ -27,8 +27,12 @@
   </div>
 </template>
 <script>
+import confirmInput from '../components/confirmInput.vue'
 export default {
   name: 'formTemplate',
+  components:{
+    confirmInput
+  },
   data() {
     return {
       displayedImage: '../img/mailIcon.png',
@@ -88,7 +92,7 @@ export default {
 .container {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
@@ -154,9 +158,11 @@ export default {
 }
 
 .container__code {
+  margin-top: 8%;
+  background-color: var(--light-green-neo);
+  padding: 3em;
   display: flex;
   flex-direction: column;
-  background-color: var(--light-green-neo);
   width: 80%;
   align-items: center;
   border-radius: 500px 500px 0 0;
@@ -242,7 +248,6 @@ export default {
   .container__code {
     display: flex;
     flex-direction: column;
-    background-color: var(--light-green-neo);
     width: 90%;
     align-items: center;
     border-radius: 350px 350px 0 0;

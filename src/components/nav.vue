@@ -63,7 +63,6 @@ body {
 }
 
 .header__menu-login {
-  background-color: var(--black-opacity);
   padding-bottom: 0.5%;
 }
 

@@ -1,6 +1,5 @@
 <template>
   <section class="login">
-    <img v-bind:src="matrix" alt="" class="matrix" />
     <form action="submit" class="login__form">
       <div class="form__images">
         <img class="image__logoType" v-bind:src="logoType" alt="Logotipo neonaviation" />
@@ -21,7 +20,6 @@
         <p><strong>termos de Serviço e Privacidade</strong> da NeoNavigation</p>
       </div>
     </form>
-    <img class="login__car" v-bind:src="car" alt="Carro estilo Matrix" />
   </section>
 </template>
 <script>
@@ -31,8 +29,6 @@ export default {
     return {
       logoType: "/img/logotipo.png",
       logo: "/img/logo.png",
-      car: "/img/matrixCar.png",
-      matrix: "/img/matrix.png",
     };
   },
 };
@@ -40,40 +36,28 @@ export default {
 <style scoped>
 
 
-.matrix {
-  width: 100vw;
-  height: auto;
-  margin: 0;
-  object-fit: cover;
-  z-index: -1;
-  display: block;
-  position: fixed; /* Fixa a imagem na viewport */
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  background-position: center;
-}
 .login {
   display: flex;
-  justify-content: space-between;
-  height: auto !important;
+  justify-content: center;
+  align-items: center;
 }
-.login__car {
-  width: 39%;
-  object-fit: cover;
-  overflow: hidden;
 
-}
 .login__form {
+  padding: 2em;
   background-color: var(--white-background);
   display: flex;
   flex-direction: column;
-  margin-left: 20%;
   height: 100%;
   width: 40%;
   border-radius: 25% 20px 25% 20px;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 5%;
+  box-shadow: 0px 0px 0px 1px rgba(165, 165, 165, 0.04),
+    -9px 9px 9px -0.5px rgba(0, 0, 0, 0.04),
+    -18px 18px 18px -1.5px rgba(0, 0, 0, 0.08),
+    -37px 37px 37px -3px rgba(0, 0, 0, 0.16),
+    -75px 75px 75px -6px rgba(0, 0, 0, 0.24),
+    -150px 150px 150px -12px rgba(19, 18, 18, 0.48) !important;
 }
 .form__images {
   display: flex;
