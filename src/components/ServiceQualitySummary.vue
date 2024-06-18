@@ -202,7 +202,7 @@ export default {
     background-color: var(--white-background);
     width: 95%;
     border-radius: 20px;
-    padding: 1.5em;
+    padding: 2em;
 }
 
 .discount__wraper {
@@ -217,7 +217,7 @@ export default {
     gap: 4px;
     min-height: 230px;
     height: auto;
-    padding: 1.5em;
+    padding: 2em;
 }
 
 .wraper__percentage {

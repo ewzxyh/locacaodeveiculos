@@ -24,6 +24,17 @@ const routes = [
     component: () => import('../views/register.vue')
   },
   {
+
+    path: '/dados',
+    name: 'dados',
+    component: () => import('../views/dados.vue')
+  },
+  {
+    path: '/carBooking',
+    name: 'carBooking',
+    component: () => import('../views/carBooking.vue')
+  },
+  {
     path: '/confirmation',
     name: 'confirmation',
     component: () => import('../views/confirmation.vue'),
