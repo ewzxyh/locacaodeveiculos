@@ -3,36 +3,36 @@
     <div class="bento-grid grid-1">
       <p class="card-title-grid-1"> Ficou <span class="highlight">com dúvidas</span> após fazer a sua reserva?
       </p>
-      <div> 
+      <div>
         <button class="help-button">Entre em contato</button>
-        <button class="portal-button">Acessar portal do cliente</button>
+        <button class="portal-button" @click="navigateToDados">Acessar portal do cliente</button>
       </div>
       <div class="grid-img-div">
         <img v-bind:src="logoHero" alt="" class="grid-image">
       </div>
     </div>
-    <div class="bento-grid grid-2">
+    <div class="bento-grid grid-2" @click="navigateToCarGroup">
       <div class="card-content">
         <h2 class="card-title">Para Longos Períodos</h2>
         <p class="card-description">Descrição</p>
         <img v-bind:src="eletrico" alt="" class="card-image">
       </div>
     </div>
-    <div class="bento-grid grid-3">
+    <div class="bento-grid grid-3" @click="navigateToCarGroup">
       <div class="card-content">
         <h2 class="card-title">Deluxe &<br>Super Deluxe</h2>
         <p class="card-description">Descrição</p>
         <img v-bind:src="eletrico" alt="" class="card-image">
       </div>
     </div>
-    <div class="bento-grid grid-4">
+    <div class="bento-grid grid-4" @click="navigateToCarGroup">
       <div class="card-content">
         <h2 class="card-title">Elétrico</h2>
         <p class="card-description">Descrição</p>
         <img v-bind:src="eletrico" alt="" class="card-image">
       </div>
     </div>
-    <div class="bento-grid grid-5">
+    <div class="bento-grid grid-5" @click="navigateToCarGroup">
       <div class="card-content">
         <h2 class="card-title">Ideal para Uber</h2>
         <p class="card-description">Descrição</p>
@@ -54,6 +54,14 @@ export default {
       logoHero: '../img/logohero.png',
     }
   },
+  methods: {
+    navigateToDados() {
+      this.$router.push('/dados');
+    },
+    navigateToCarGroup() {
+      this.$router.push('/carGroup');
+    }
+  }
 };
 </script> 
 
@@ -83,11 +91,11 @@ export default {
   position: relative;
   /* Para posicionamento absoluto da imagem */
   box-shadow:
-        inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
-        0px 0px 0px 1px rgba(0, 0, 0, 0.10), 
-        0px 2px 2px 0px rgba(0, 0, 0, 0.10), 
-        0px 4px 4px 0px rgba(0, 0, 0, 0.10), 
-        0px 8px 8px 0px rgba(0, 0, 0, 0.10); 
+    inset 1px 0px 0px 0px rgba(0, 0, 0, 0.05),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.10),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.10),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.10),
+    0px 8px 8px 0px rgba(0, 0, 0, 0.10);
   /* Sombra */
   background-color: #fffefa;
   /* Background branco para os cards */
@@ -161,11 +169,11 @@ export default {
   font-size: 1.5em;
   color: #292929;
   box-shadow:
-        inset 1px 0px 0px 0px rgba(255, 255, 255, 0.03),
-        0px 0px 0px 1px rgba(0, 0, 0, 0.10),
-        0px 2px 2px 0px rgba(0, 0, 0, 0.10),
-        0px 4px 4px 0px rgba(0, 0, 0, 0.10),
-        0px 8px 8px 0px rgba(0, 0, 0, 0.10);
+    inset 1px 0px 0px 0px rgba(255, 255, 255, 0.03),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.10),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.10),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.10),
+    0px 8px 8px 0px rgba(0, 0, 0, 0.10);
 }
 
 .portal-button {
@@ -180,11 +188,11 @@ export default {
   font-size: 1.5em;
   color: #292929;
   box-shadow:
-        inset 1px 0px 0px 0px rgba(255, 255, 255, 0.03),
-        0px 0px 0px 1px rgba(0, 0, 0, 0.10),
-        0px 2px 2px 0px rgba(0, 0, 0, 0.10),
-        0px 4px 4px 0px rgba(0, 0, 0, 0.10),
-        0px 8px 8px 0px rgba(0, 0, 0, 0.10);
+    inset 1px 0px 0px 0px rgba(255, 255, 255, 0.03),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.10),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.10),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.10),
+    0px 8px 8px 0px rgba(0, 0, 0, 0.10);
 }
 
 .card-title {

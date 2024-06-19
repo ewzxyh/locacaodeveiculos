@@ -1,5 +1,5 @@
 <template>
-  <Form ref="formRegister" @form-submitted="handleFormSubmitted" />
+  <Form ref="formRegister" @form-submitted="handleFormSubmitted"></Form>
 </template>
 <script>
 import Form from "../components/form.vue";
@@ -12,8 +12,8 @@ export default {
   },
   methods: {
     handleFormSubmitted(formData) {
-      axios.put()
-      this.$router.push("/confirmation");
+      sessionStorage.setItem('Ususario',JSON.stringify(formData));
+      this.$router.push("/dados");
     },
   },
 };

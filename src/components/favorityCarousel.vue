@@ -1,6 +1,6 @@
 <template>
     <section class="container">
-        <h1 class="container__title">Navegue pelos <strong>Grupos Favoritos</strong></h1>
+        <h1 class="container__title">Navegue pelos <strong>Carros Favoritos</strong></h1>
         <swiper :slidesPerView="3"  :loop="true" :spaceBetween="10" :speed="1200"   :centeredSlides="true" :autoplay="{
       delay: 3000,
       disableOnInteraction: false,

@@ -59,6 +59,7 @@
             type="submit"
             :class="{ 'container__comfirm-expanded': allFieldsFilled }"
             class="container__comfirm"
+            @click="navigateToCarGroup"
           >
             Continuar
           </button>
@@ -269,6 +270,9 @@ export default {
     resetText() {
       this.buttonText = this.originalText;
     },
+    navigateToCarGroup() {
+      this.$router.push('/carGroup');
+    }
   },
   computed: {
     allFieldsFilled() {

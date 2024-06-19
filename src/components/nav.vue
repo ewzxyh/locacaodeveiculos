@@ -5,7 +5,7 @@
     
     <div class="menu__cargrup">
       <img v-bind:src="carIcon" alt="icone de carro" draggable="false" class="cargrup__image" />
-      <a href="#" class="cargrup__link">Grupo de Carros</a>
+      <a href="#" class="cargrup__link" @click="navigateToCarGroup">Escolha seu Carro</a>
     </div>
 
     <router-link to="/" class="menu__homeLink">
@@ -43,6 +43,9 @@ export default {
     isLoginPage() {
       return this.$route.name === 'login';
     },
+    navigateToCarGroup() {
+      this.$router.push('/carGroup');
+    }
   },
 };
 </script>

@@ -134,6 +134,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  padding: 1em;
 }
 .wraper__main-section {
   display: flex;
@@ -160,13 +161,15 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
+
 }
 .cards_content {
+  padding: 0em 10em;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  width: 24%;
-  height: 400px;
+  width: 40%;
+  height: 500px;
   gap: 20px;
   background-color: var(--white-background);
   justify-content: center;
@@ -174,11 +177,12 @@ export default {
   box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.404);
 }
 .cards_content-red {
+  padding: 0em 10em;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  width: 24%;
-  height: 400px;
+  width: 40%;
+  height: 500px;
   gap: 20px;
   background-color: var(--white-background);
   justify-content: center;
@@ -235,11 +239,13 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 2em;
 }
 .table__title {
   text-align: center;
   background-color: var(--light-green-neo);
   border-radius: 30px 30px 0 0;
+  padding: 0.5em;
 }
 .content__title-2 {
   color: var(--darker-green);
@@ -248,7 +254,7 @@ th {
   text-align: start;
 }
 .card {
-  padding: 20px;
+
   border-radius: 10px;
   width: 90%;
 }
@@ -282,14 +288,16 @@ th {
   gap: 25%;
   align-items: center;
   border-radius: 0 0 30px 30px;
+  padding: 2em;
 }
 .confirmation {
   width: 90%;
   color: var(--white-background);
-  background-color: var(--darker-green);
+  background-color: #0a970a;
   font-size: 2.5rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  padding: 0.5em;
 }
 </style>
